@@ -1,0 +1,35 @@
+Create a lash extension product database
+
+
+CREATE TABLE products (id INTEGER PRIMARY KEY, name TEXT, category TEXT, price NUMERIC, quantity NUMERIC);
+
+INSERT INTO products VALUES (1, "C .15 12mm", "lashes", 15.00, 10);
+INSERT INTO products VALUES (2, "C .15 11mm", "lashes", 15.00, 10);
+INSERT INTO products VALUES (3, "C .15 10mm", "lashes", 15.00, 10);
+INSERT INTO products VALUES (4, "lash bath", "aftercare", 10.00, 25);
+INSERT INTO products VALUES (5, "lash cleanser brush", "aftercare", 3.50, 50);
+INSERT INTO products VALUES (6, "D .20 10mm", "lashes", 15.00, 10);
+INSERT INTO products VALUES (7, "c .15 mixed tray", "lashes", 21.50, 15);
+INSERT INTO products VALUES (8, "protective glaze", "aftercare", 8.50, 23);
+INSERT INTO products VALUES (9, "D .20 11mm", "lashes", 15.00, 10);
+INSERT INTO products VALUES (10, "D .20 12mm", "lashes", 15.00, 10);
+INSERT INTO products VALUES (11, "foaming makeup remover", "aftercare", 4.00, 57);
+INSERT INTO products VALUES (12, "D .20 mixed tray", "lashes", 21.50, 15);
+INSERT INTO products VALUES (13, "lash crack", "adhesive", 54.00, 102);
+INSERT INTO products VALUES (14, "divine pro", "adhesive", 32.00, 74);
+INSERT INTO products VALUES (15, "OMG", "adhesive", 50.50, 125);
+
+
+--Display the database ordered by price
+
+SELECT * FROM products ORDER BY price;
+
+
+--What is the total amount of products?
+
+SELECT SUM(quantity) FROM products;
+
+
+--What is the average price of the products?
+
+SELECT AVG(price) FROM products;
